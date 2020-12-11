@@ -28,6 +28,5 @@ config
 coverage
 dist/**/*
 node_modules
-openapi
 public
 sw.js
