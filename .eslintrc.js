@@ -20,7 +20,6 @@ const config = {
           'remeda',
           'runtypes',
           '@sindresorhus/is',
-          'type-fest',
         ],
         patterns: ['**/__mocks__/**'],
       },
