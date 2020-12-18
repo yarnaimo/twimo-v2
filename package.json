@@ -17,7 +17,9 @@
     "test": "NODE_ENV=test jest",
     "ts-node": "ts-node"
   },
-  "dependencies": {},
+  "dependencies": {
+    "oauth-1.0a": "^2.2.6"
+  },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.2",
     "@openapitools/openapi-generator-cli": "^2.1.7",
