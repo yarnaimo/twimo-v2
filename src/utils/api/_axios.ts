@@ -1,17 +1,11 @@
 import axios from 'axios'
 import crypto from 'crypto'
 import OAuth from 'oauth-1.0a'
-import { AccessTokens, ApiKeys } from '../../types'
+import { Consumer, Token } from '../../types'
 
-export const configureUserContextAxios = (
-  { apiKey, apiSecret }: ApiKeys,
-  { token, tokenSecret }: AccessTokens,
-) => {
+export const configureUserContextAxios = (consumer: Consumer, token: Token) => {
   const oauth = new OAuth({
-    consumer: {
-      key: apiKey,
-      secret: apiSecret,
-    },
+    consumer,
     signature_method: 'HMAC-SHA1',
     realm: '',
     hash_function: (baseString, key) =>
@@ -24,7 +18,7 @@ export const configureUserContextAxios = (
     const { Authorization } = oauth.toHeader(
       oauth.authorize(
         { url: config.url!, method: config.method!, data: config.data },
-        { key: token, secret: tokenSecret },
+        token,
       ),
     )
     config.headers.Authorization = Authorization

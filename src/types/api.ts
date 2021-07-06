@@ -1,8 +1,1 @@
-export type ApiKeys = {
-  apiKey: string
-  apiSecret: string
-}
-export type AccessTokens = {
-  token: string
-  tokenSecret: string
-}
+export { Consumer, Token } from 'oauth-1.0a'

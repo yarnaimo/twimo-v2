@@ -1,7 +1,7 @@
 import { Class } from 'type-fest'
 import { Configuration, ConfigurationParameters } from '../../../openapi'
 import { BaseAPI } from '../../../openapi/base'
-import { AccessTokens, ApiKeys } from '../../types'
+import { Consumer, Token } from '../../types'
 import { configureUserContextAxios } from './_axios'
 
 export const configureApi = <T extends BaseAPI>(
@@ -19,14 +19,14 @@ export const configureApi = <T extends BaseAPI>(
 
 export const configureUserContextApi = <T extends BaseAPI>(
   ApiInterface: Class<T>,
-  apiKeys: ApiKeys,
-  accessTokens: AccessTokens,
+  consumer: Consumer,
+  token: Token,
   configParams: ConfigurationParameters = {},
 ) => {
   const config = new Configuration({
     ...configParams,
   })
-  const axios = configureUserContextAxios(apiKeys, accessTokens)
+  const axios = configureUserContextAxios(consumer, token)
   const api = new ApiInterface(config, undefined, axios)
   return api
 }

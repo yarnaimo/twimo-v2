@@ -33,10 +33,10 @@ import {
   UsersApi,
 } from 'twimo-v2'
 
-const apiKeys = { apiKey: 'xxxxxxxx', apiSecret: 'xxxxxxxx' }
-const accessTokens = { token: 'xxxxxxxx', tokenSecret: 'xxxxxxxx' }
+const consumer = { key: 'xxxxxxxx', secret: 'xxxxxxxx' }
+const token = { key: 'xxxxxxxx', secret: 'xxxxxxxx' }
 
-const tweetsApi = configureUserContextApi(TweetsApi, apiKeys, accessTokens)
+const tweetsApi = configureUserContextApi(TweetsApi, consumer, token)
 ```
 
 ### API
