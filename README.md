@@ -17,17 +17,17 @@ npm i -S twimo-v2
 ### Configure (Bearer Token)
 
 ```ts
-import { configureApi, TweetsApi, SearchApi, UsersApi } from 'twimo-v2'
+import { configureTwitterApi, TweetsApi, SearchApi, UsersApi } from 'twimo-v2'
 
 const bearerToken = 'xxxxxxxx'
-const tweetsApi = configureApi(TweetsApi, bearerToken)
+const tweetsApi = configureTwitterApi(TweetsApi, bearerToken)
 ```
 
 ### Configure (User Context)
 
 ```ts
 import {
-  configureUserContextApi,
+  configureUserContextTwitterApi,
   TweetsApi,
   SearchApi,
   UsersApi,
@@ -36,7 +36,7 @@ import {
 const consumer = { key: 'xxxxxxxx', secret: 'xxxxxxxx' }
 const token = { key: 'xxxxxxxx', secret: 'xxxxxxxx' }
 
-const tweetsApi = configureUserContextApi(TweetsApi, consumer, token)
+const tweetsApi = configureUserContextTwitterApi(TweetsApi, consumer, token)
 ```
 
 ### API
