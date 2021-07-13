@@ -1,7 +1,7 @@
-import { UserPageURL } from './user'
+import { UserPageUrl } from './user'
 
-describe('UserPageURL', () => {
-  const expected = {
+describe('UserPageUrl', () => {
+  const expected: UserPageUrl = {
     username: 'Twitter',
     normalized: 'https://twitter.com/Twitter',
   }
@@ -13,11 +13,11 @@ describe('UserPageURL', () => {
       'https://mobile.twitter.com/Twitter',
       'https://mobile.twitter.com/Twitter?foo=bar',
     ])('%p', (url) => {
-      const parsed = UserPageURL.parse(url)
+      const parsed = UserPageUrl.parse(url)
       expect(parsed).toEqual(expected)
     })
 
-    expect(UserPageURL.parse('https://example.com/Twitter')).toBe(null)
+    expect(UserPageUrl.parse('https://example.com/Twitter')).toBe(null)
   })
 
   describe('fromUser', () => {
@@ -26,7 +26,7 @@ describe('UserPageURL', () => {
         username: 'Twitter',
       },
     ])('%p', (user) => {
-      const result = UserPageURL.fromUser(user)
+      const result = UserPageUrl.fromUser(user)
       expect(result).toEqual(expected)
     })
   })

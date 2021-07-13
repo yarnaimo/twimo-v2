@@ -1,8 +1,8 @@
 import { Expansions, Tweet } from '../..'
-import { TweetURL } from './tweet'
+import { TweetUrl } from './tweet'
 
-describe('TweetURL', () => {
-  const expected = {
+describe('TweetUrl', () => {
+  const expected: TweetUrl = {
     tweetId: '12345678',
     username: 'Twitter',
     normalized: 'https://twitter.com/Twitter/status/12345678',
@@ -15,12 +15,12 @@ describe('TweetURL', () => {
       'https://mobile.twitter.com/Twitter/status/12345678',
       'https://mobile.twitter.com/Twitter/status/12345678?foo=bar',
     ])('%p', (url) => {
-      const result = TweetURL.parse(url)
+      const result = TweetUrl.parse(url)
       expect(result).toEqual(expected)
     })
 
-    expect(TweetURL.parse('https://twitter.com/Twitter')).toBe(null)
-    expect(TweetURL.parse('https://example.com/Twitter/status/12345678')).toBe(
+    expect(TweetUrl.parse('https://twitter.com/Twitter')).toBe(null)
+    expect(TweetUrl.parse('https://example.com/Twitter/status/12345678')).toBe(
       null,
     )
   })
@@ -44,7 +44,7 @@ describe('TweetURL', () => {
       //   },
       // },
     ])('%p', (tweet, expansions) => {
-      const result = TweetURL.fromTweet(
+      const result = TweetUrl.fromTweet(
         tweet as Tweet,
         expansions as Expansions,
       )
