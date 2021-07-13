@@ -6,7 +6,7 @@
   "author": "yamaimo <yarnaimo@gmail.com>",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "debug": "node --inspect -r ts-node/register",
     "dev": "yarn ts-node src/index.ts",
     "lint": "eslint --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
