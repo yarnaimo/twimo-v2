@@ -2,7 +2,7 @@ import { Class } from 'type-fest'
 import { Configuration, ConfigurationParameters } from '../../openapi'
 import { BaseAPI } from '../../openapi/base'
 import { Consumer, Token } from '../types'
-import { configureUserContextAxios } from './_axios'
+import { configureApiAxios, configureUserContextApiAxios } from './_axios'
 
 export const configureTwitterApi = <T extends BaseAPI>(
   ApiInterface: Class<T>,
@@ -13,7 +13,8 @@ export const configureTwitterApi = <T extends BaseAPI>(
     ...configParams,
     accessToken: bearerToken,
   })
-  const api = new ApiInterface(config)
+  const axios = configureApiAxios()
+  const api = new ApiInterface(config, undefined, axios)
   return api
 }
 
@@ -26,7 +27,7 @@ export const configureUserContextTwitterApi = <T extends BaseAPI>(
   const config = new Configuration({
     ...configParams,
   })
-  const axios = configureUserContextAxios(consumer, token)
+  const axios = configureUserContextApiAxios(consumer, token)
   const api = new ApiInterface(config, undefined, axios)
   return api
 }
