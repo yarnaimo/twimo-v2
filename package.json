@@ -18,6 +18,7 @@
     "ts-node": "ts-node"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "oauth-1.0a": "^2.2.6"
   },
   "devDependencies": {
