@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "noImplicitOverride": false,
     "outDir": "dist",
     "lib": ["dom", "dom.iterable", "es2019"],
     "baseUrl": ".",

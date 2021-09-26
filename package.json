@@ -18,24 +18,24 @@
     "ts-node": "ts-node"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "oauth-1.0a": "^2.2.6"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.2",
-    "@openapitools/openapi-generator-cli": "^2.1.7",
-    "@sindresorhus/tsconfig": "^0.8.0",
-    "@types/jest": "^26.0.18",
-    "@types/prettier": "^2.1.5",
-    "@yarnaimo/eslint-config": "^0.1.6",
-    "jest": "^26.6.3",
-    "np": "^7.0.0",
-    "prettier": "^2.2.1",
-    "sort-package-json": "^1.48.0",
-    "ts-jest": "^26.4.4",
-    "ts-node": "^9.1.1",
-    "tsd": "^0.14.0",
-    "type-fest": "^0.20.2",
-    "typescript": "^4.1.2"
+    "@arkweid/lefthook": "^0.7.6",
+    "@openapitools/openapi-generator-cli": "^2.4.5",
+    "@sindresorhus/tsconfig": "^2.0.0",
+    "@types/jest": "^27.0.2",
+    "@types/prettier": "^2.4.0",
+    "@yarnaimo/eslint-config": "^0.2.3",
+    "jest": "^27.2.2",
+    "np": "^7.5.0",
+    "prettier": "^2.4.1",
+    "sort-package-json": "^1.52.0",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "tsd": "^0.17.0",
+    "type-fest": "^2.3.4",
+    "typescript": "^4.4.3"
   }
 }
