@@ -1,5 +1,5 @@
-import { Expansions, Tweet } from '../..'
-import { TweetUrl } from './tweet'
+import { Expansions, Tweet } from '../../index.js'
+import { TweetUrl } from './tweet.js'
 
 describe('TweetUrl', () => {
   const expected: TweetUrl = {

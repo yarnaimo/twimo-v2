@@ -1,8 +1,8 @@
 import { Class } from 'type-fest'
-import { Configuration, ConfigurationParameters } from '../../openapi'
-import { BaseAPI } from '../../openapi/base'
-import { Consumer, Token } from '../types'
-import { configureApiAxios, configureUserContextApiAxios } from './_axios'
+import { Configuration, ConfigurationParameters } from '../../openapi/index.js'
+import { BaseAPI } from '../../openapi/base.js'
+import { Consumer, Token } from '../types/index.js'
+import { configureApiAxios, configureUserContextApiAxios } from './_axios.js'
 
 export const configureTwitterApi = <T extends BaseAPI>(
   ApiInterface: Class<T>,

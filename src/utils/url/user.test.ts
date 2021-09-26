@@ -1,4 +1,4 @@
-import { UserPageUrl } from './user'
+import { UserPageUrl } from './user.js'
 
 describe('UserPageUrl', () => {
   const expected: UserPageUrl = {

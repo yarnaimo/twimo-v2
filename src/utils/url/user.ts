@@ -1,7 +1,8 @@
-import { User } from '../../../openapi'
-import { matchGroups } from '../_regexp'
+import { User } from '../../../openapi/index.js'
+import { matchGroups } from '../_regexp.js'
 
-const userPageUrlPattern = /^https:\/\/(?:mobile\.)?twitter.com\/(?<username>\w+)/
+const userPageUrlPattern =
+  /^https:\/\/(?:mobile\.)?twitter.com\/(?<username>\w+)/
 
 export class UserPageUrl {
   static parse(url: string): UserPageUrl | null {

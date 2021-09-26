@@ -1,7 +1,7 @@
 import axios from 'axios'
 import crypto from 'crypto'
 import OAuth from 'oauth-1.0a'
-import { Consumer, Token } from '../types'
+import { Consumer, Token } from '../types/index.js'
 
 export const configureApiAxios = () => {
   const apiAxios = axios.create()

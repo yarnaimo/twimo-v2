@@ -1,7 +1,8 @@
-import { Expansions, Tweet } from '../../../openapi'
-import { matchGroups } from '../_regexp'
+import { Expansions, Tweet } from '../../../openapi/index.js'
+import { matchGroups } from '../_regexp.js'
 
-const tweetUrlPattern = /^https:\/\/(?:mobile\.)?twitter.com\/(?<username>\w+)\/status\/(?<tweetId>\d+)/
+const tweetUrlPattern =
+  /^https:\/\/(?:mobile\.)?twitter.com\/(?<username>\w+)\/status\/(?<tweetId>\d+)/
 
 export class TweetUrl {
   static parse(url: string): TweetUrl | null {

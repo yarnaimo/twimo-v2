@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts?(x)'],
   coveragePathIgnorePatterns: ['/__tests__/'],
@@ -18,4 +18,5 @@ module.exports = {
       diagnostics: false,
     },
   },
+  resolver: './jest.resolver.cjs',
 }

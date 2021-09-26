@@ -4,18 +4,18 @@
   "repository": "github:yarnaimo/twimo-v2",
   "license": "MIT",
   "author": "yamaimo <yarnaimo@gmail.com>",
+  "type": "module",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "debug": "node --inspect -r ts-node/register",
+    "build": "rm -rf dist && tsc && node add-import-extension.js openapi",
     "dev": "yarn ts-node src/index.ts",
     "lint": "eslint --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
     "openapi:generate": "./openapi-generate.sh",
     "prepare": "yarn build",
     "release": "yarn openapi:generate && np --no-cleanup",
-    "start": "NODE_ENV=production node dist/index.js",
     "test": "NODE_ENV=test jest",
-    "ts-node": "ts-node"
+    "ts-node": "node --loader ts-node/esm --experimental-repl-await",
+    "ts-node:debug": "yarn ts-node --inspect"
   },
   "dependencies": {
     "axios": "^0.21.4",
@@ -28,6 +28,7 @@
     "@types/jest": "^27.0.2",
     "@types/prettier": "^2.4.0",
     "@yarnaimo/eslint-config": "^0.2.3",
+    "enhanced-resolve": "^5.8.3",
     "jest": "^27.2.2",
     "np": "^7.5.0",
     "prettier": "^2.4.1",
