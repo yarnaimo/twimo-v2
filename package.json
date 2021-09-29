@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "yamaimo <yarnaimo@gmail.com>",
   "type": "module",
-  "main": "dist/src/index.js",
+  "exports": "./dist/src/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc && node add-import-extension.js openapi",
     "dev": "yarn ts-node src/index.ts",
