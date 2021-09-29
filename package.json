@@ -6,6 +6,7 @@
   "author": "yamaimo <yarnaimo@gmail.com>",
   "type": "module",
   "exports": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc && node add-import-extension.js openapi",
     "dev": "yarn ts-node src/index.ts",
