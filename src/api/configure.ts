@@ -1,6 +1,7 @@
 import { Class } from 'type-fest'
-import { Configuration, ConfigurationParameters } from '../../openapi/index.js'
+
 import { BaseAPI } from '../../openapi/base.js'
+import { Configuration, ConfigurationParameters } from '../../openapi/index.js'
 import { Consumer, Token } from '../types/index.js'
 import { configureApiAxios, configureUserContextApiAxios } from './_axios.js'
 

@@ -1,6 +1,8 @@
-import axios from 'axios'
 import crypto from 'crypto'
+
+import axios from 'axios'
 import OAuth from 'oauth-1.0a'
+
 import { Consumer, Token } from '../types/index.js'
 
 export const configureApiAxios = () => {
@@ -34,7 +36,8 @@ export const configureUserContextApiAxios = (
         token,
       ),
     )
-    config.headers.Authorization = Authorization
+    config.headers ??= {}
+    config.headers['Authorization'] = Authorization
 
     return config
   })
